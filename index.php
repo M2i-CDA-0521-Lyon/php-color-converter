@@ -84,7 +84,7 @@ if (isset($_GET['red']) && isset($_GET['green']) && isset($_GET['blue'])) {
                 <div class="mb-3">
                     <label for="hex-result" class="form-label">Code héxadécimal</label>
                     <div class="input-group copy-to-clipboard">
-                        <input name="hex-result" type="text" class="form-control" value="#<?= $color->formatColorAsHex() ?>" readonly />
+                        <input name="hex-result" type="text" class="form-control" value="#<?= isset($color) ? $color->formatColorAsHex() : null ?>" readonly />
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="button"><i class="bi bi-clipboard"></i></button>
                         </div>
@@ -95,7 +95,7 @@ if (isset($_GET['red']) && isset($_GET['green']) && isset($_GET['blue'])) {
                 <div class="mb-3">
                     <label for="rgb-result" class="form-label">Code RGB</label>
                     <div class="input-group copy-to-clipboard">
-                        <input name="rgb-result" type="text" class="form-control" value="<?= $color->formatColorAsRgb() ?>" readonly />
+                        <input name="rgb-result" type="text" class="form-control" value="<?= isset($color) ? $color->formatColorAsRgb() : null ?>" readonly />
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="button"><i class="bi bi-clipboard"></i></button>
                         </div>
@@ -106,7 +106,7 @@ if (isset($_GET['red']) && isset($_GET['green']) && isset($_GET['blue'])) {
                 <div class="mb-3">
                     <label for="red-result" class="form-label">Rouge</label>
                     <div class="input-group copy-to-clipboard">
-                        <input name="red-result" min="0" max="255" type="number" class="form-control" value="<?= $color->red ?>" readonly />
+                        <input name="red-result" min="0" max="255" type="number" class="form-control" value="<?= isset($color) ? $color->red : null ?>" readonly />
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="button"><i class="bi bi-clipboard"></i></button>
                         </div>
@@ -115,7 +115,7 @@ if (isset($_GET['red']) && isset($_GET['green']) && isset($_GET['blue'])) {
                 <div class="mb-3">
                     <label for="green-result" class="form-label">Vert</label>
                     <div class="input-group copy-to-clipboard">
-                        <input name="green-result" min="0" max="255" type="number" class="form-control" value="<?= $color->green ?>" readonly />
+                        <input name="green-result" min="0" max="255" type="number" class="form-control" value="<?= isset($color) ? $color->green : null ?>" readonly />
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="button"><i class="bi bi-clipboard"></i></button>
                         </div>
@@ -124,7 +124,7 @@ if (isset($_GET['red']) && isset($_GET['green']) && isset($_GET['blue'])) {
                 <div class="mb-3">
                     <label for="blue-result" class="form-label">Bleu</label>
                     <div class="input-group copy-to-clipboard">
-                        <input name="blue-result" min="0" max="255" type="number" class="form-control" value="<?= $color->blue ?>" readonly />
+                        <input name="blue-result" min="0" max="255" type="number" class="form-control" value="<?= isset($color) ? $color->blue : null ?>" readonly />
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="button"><i class="bi bi-clipboard"></i></button>
                         </div>
